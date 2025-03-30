@@ -2,7 +2,6 @@ package com.coresystems.episode.boundary;
 
 import com.coresystems.common.entity.Episode;
 import com.coresystems.common.entity.TvSeries;
-import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
