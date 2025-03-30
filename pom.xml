@@ -6,6 +6,39 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <name>Tv Series Rest Clients</name>
+    <description>A sample library to publish to GitHub Packages</description>
+    <url>https://github.com/maranza/github-mvn-registry-example</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>maranza</id>
+            <name>maranza</name>
+            <email>your-email@example.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/maranza/github-mvn-registry-example</url>
+        <connection>scm:git:https://github.com/maranza/github-mvn-registry-example.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:maranza/github-mvn-registry-example.git</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/maranza/github-mvn-registry-example</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <compiler-plugin.version>3.14.0</compiler-plugin.version>
         <maven.compiler.release>21</maven.compiler.release>
@@ -57,6 +90,19 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>${quarkus.platform.group-id}</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
