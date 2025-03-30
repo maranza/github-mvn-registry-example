@@ -28,7 +28,6 @@ public class TvSeriesService {
   @RestClient
   SeriesClient seriesClient;
 
-  @Inject
   @RestClient
   EpisodeClient episodeClient;
 

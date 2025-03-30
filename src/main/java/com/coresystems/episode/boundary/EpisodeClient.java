@@ -20,7 +20,6 @@ import java.util.List;
  * @description :
  * @since : 2025/03/30, Sun
  */
-@ApplicationScoped
 @Path("/shows")
 @Produces(MediaType.APPLICATION_JSON)
 @RegisterRestClient
