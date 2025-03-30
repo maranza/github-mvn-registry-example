@@ -1,6 +1,7 @@
 package com.coresystems.tvseries.boundary;
 
 import com.coresystems.common.entity.TvSeries;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -15,6 +16,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
  * @description :
  * @since : 2025/03/30, Sun
  */
+@ApplicationScoped
 @Path("/singlesearch")
 @Produces(MediaType.APPLICATION_JSON)
 @RegisterRestClient
