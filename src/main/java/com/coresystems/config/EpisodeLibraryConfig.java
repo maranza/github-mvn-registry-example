@@ -16,6 +16,7 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 public class EpisodeLibraryConfig {
 
   @Produces
+  @RestClientQualifier
   EpisodeClient produceEpisodeClient(@RestClient EpisodeClient episodeClient) {
     return episodeClient;
   }
